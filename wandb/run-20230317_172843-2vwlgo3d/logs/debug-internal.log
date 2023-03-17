@@ -1,0 +1,205 @@
+2023-03-17 17:28:43,966 INFO    StreamThr :80849 [internal.py:wandb_internal():87] W&B internal server running at pid: 80849, started at: 2023-03-17 17:28:43.965519
+2023-03-17 17:28:43,967 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: status
+2023-03-17 17:28:43,974 INFO    WriterThread:80849 [datastore.py:open_for_write():85] open: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/run-2vwlgo3d.wandb
+2023-03-17 17:28:43,975 DEBUG   SenderThread:80849 [sender.py:send():336] send: header
+2023-03-17 17:28:43,990 DEBUG   SenderThread:80849 [sender.py:send():336] send: run
+2023-03-17 17:28:44,710 INFO    SenderThread:80849 [dir_watcher.py:__init__():216] watching files in: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files
+2023-03-17 17:28:44,710 INFO    SenderThread:80849 [sender.py:_start_run_threads():1067] run started: 2vwlgo3d with start time 1679054323.968372
+2023-03-17 17:28:44,710 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 17:28:44,711 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: check_version
+2023-03-17 17:28:44,711 INFO    SenderThread:80849 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 17:28:44,712 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: check_version
+2023-03-17 17:28:44,802 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: run_start
+2023-03-17 17:28:44,805 DEBUG   HandlerThread:80849 [system_info.py:__init__():31] System info init
+2023-03-17 17:28:44,806 DEBUG   HandlerThread:80849 [system_info.py:__init__():46] System info init done
+2023-03-17 17:28:44,806 INFO    HandlerThread:80849 [system_monitor.py:start():151] Starting system monitor
+2023-03-17 17:28:44,806 INFO    SystemMonitor:80849 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-17 17:28:44,806 INFO    HandlerThread:80849 [system_monitor.py:probe():172] Collecting system info
+2023-03-17 17:28:44,806 INFO    SystemMonitor:80849 [interfaces.py:start():168] Started cpu
+2023-03-17 17:28:44,807 INFO    SystemMonitor:80849 [interfaces.py:start():168] Started disk
+2023-03-17 17:28:44,808 INFO    SystemMonitor:80849 [interfaces.py:start():168] Started gpu
+2023-03-17 17:28:44,808 INFO    SystemMonitor:80849 [interfaces.py:start():168] Started memory
+2023-03-17 17:28:44,809 INFO    SystemMonitor:80849 [interfaces.py:start():168] Started network
+2023-03-17 17:28:44,814 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:44,814 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:44,832 DEBUG   HandlerThread:80849 [system_info.py:probe():195] Probing system
+2023-03-17 17:28:44,838 DEBUG   HandlerThread:80849 [system_info.py:_probe_git():180] Probing git
+2023-03-17 17:28:44,853 DEBUG   HandlerThread:80849 [system_info.py:_probe_git():188] Probing git done
+2023-03-17 17:28:44,853 DEBUG   HandlerThread:80849 [system_info.py:probe():241] Probing system done
+2023-03-17 17:28:44,853 DEBUG   HandlerThread:80849 [system_monitor.py:probe():181] {'os': 'Linux-5.4.0-144-generic-x86_64-with-glibc2.10', 'python': '3.8.8', 'heartbeatAt': '2023-03-17T11:58:44.832478', 'startedAt': '2023-03-17T11:58:43.944584', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'main.py', 'codePath': 'main.py', 'git': {'remote': None, 'commit': '4a9010aa73cd335acff4c34a834f72f1d2c8306a'}, 'email': 'tharikhlegend@gmail.com', 'root': '/home/tharikh/dl-ass-1', 'host': 'legend', 'username': 'tharikh', 'executable': '/home/tharikh/anaconda3/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2671.049625, 'min': 400.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 2637.684, 'min': 400.0, 'max': 3900.0}, {'current': 2723.569, 'min': 400.0, 'max': 3900.0}, {'current': 2623.255, 'min': 400.0, 'max': 3900.0}, {'current': 2549.732, 'min': 400.0, 'max': 3900.0}, {'current': 2782.597, 'min': 400.0, 'max': 3900.0}, {'current': 2714.614, 'min': 400.0, 'max': 3900.0}, {'current': 2657.676, 'min': 400.0, 'max': 3900.0}, {'current': 2679.27, 'min': 400.0, 'max': 3900.0}], 'disk': {'total': 54.63949966430664, 'used': 12.451610565185547}, 'gpu': 'NVIDIA GeForce MX250', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce MX250', 'memory_total': 2099904512}], 'memory': {'total': 7.61993408203125}}
+2023-03-17 17:28:44,853 INFO    HandlerThread:80849 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-17 17:28:44,853 INFO    HandlerThread:80849 [system_monitor.py:probe():185] Publishing system info
+2023-03-17 17:28:44,853 DEBUG   HandlerThread:80849 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-17 17:28:44,854 DEBUG   HandlerThread:80849 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-17 17:28:44,854 DEBUG   HandlerThread:80849 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-17 17:28:45,716 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/requirements.txt
+2023-03-17 17:28:45,717 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/conda-environment.yaml
+2023-03-17 17:28:45,717 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/wandb-summary.json
+2023-03-17 17:28:46,815 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:46,815 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:48,817 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:48,818 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:50,819 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:50,819 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:52,820 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:52,820 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:54,820 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:54,820 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:55,040 DEBUG   HandlerThread:80849 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-17 17:28:55,041 INFO    HandlerThread:80849 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-17 17:28:55,047 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:28:55,047 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 17:28:55,047 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:28:55,047 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 17:28:55,048 DEBUG   SenderThread:80849 [sender.py:send():336] send: files
+2023-03-17 17:28:55,048 INFO    SenderThread:80849 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-17 17:28:55,054 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 17:28:55,054 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 17:28:55,490 DEBUG   SenderThread:80849 [sender.py:send():336] send: telemetry
+2023-03-17 17:28:55,491 DEBUG   SenderThread:80849 [sender.py:send():336] send: telemetry
+2023-03-17 17:28:55,492 DEBUG   SenderThread:80849 [sender.py:send():336] send: run
+2023-03-17 17:28:55,721 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/config.yaml
+2023-03-17 17:28:55,722 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/conda-environment.yaml
+2023-03-17 17:28:55,722 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/wandb-metadata.json
+2023-03-17 17:28:55,833 INFO    SenderThread:80849 [sender.py:send_run():944] updated run: 2vwlgo3d
+2023-03-17 17:28:56,140 INFO    wandb-upload_0:80849 [upload_job.py:push():138] Uploaded file /tmp/tmpit73vgqhwandb/qsmw3qiw-wandb-metadata.json
+2023-03-17 17:28:56,821 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:56,821 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:58,822 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:58,822 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:28:59,834 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:29:00,823 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:29:00,823 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:29:02,824 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:29:02,824 ERROR   gpu       :80849 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:29:04,603 DEBUG   SenderThread:80849 [sender.py:send():336] send: exit
+2023-03-17 17:29:04,603 INFO    SenderThread:80849 [sender.py:send_exit():559] handling exit code: 1
+2023-03-17 17:29:04,603 INFO    SenderThread:80849 [sender.py:send_exit():561] handling runtime: 19
+2023-03-17 17:29:04,605 INFO    SenderThread:80849 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 17:29:04,605 INFO    SenderThread:80849 [sender.py:send_exit():567] send defer
+2023-03-17 17:29:04,605 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,605 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-17 17:29:04,605 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,605 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-17 17:29:04,605 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 1
+2023-03-17 17:29:04,605 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,605 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-17 17:29:04,606 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,606 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-17 17:29:04,606 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 2
+2023-03-17 17:29:04,606 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,606 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-17 17:29:04,606 INFO    HandlerThread:80849 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-17 17:29:04,606 DEBUG   SystemMonitor:80849 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-17 17:29:04,606 INFO    HandlerThread:80849 [interfaces.py:finish():175] Joined cpu
+2023-03-17 17:29:04,606 DEBUG   SystemMonitor:80849 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-17 17:29:04,607 DEBUG   SystemMonitor:80849 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-17 17:29:04,607 INFO    HandlerThread:80849 [interfaces.py:finish():175] Joined disk
+2023-03-17 17:29:04,642 ERROR   gpu       :80849 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2023-03-17 17:29:04,642 INFO    HandlerThread:80849 [interfaces.py:finish():175] Joined gpu
+2023-03-17 17:29:04,642 INFO    HandlerThread:80849 [interfaces.py:finish():175] Joined memory
+2023-03-17 17:29:04,642 INFO    HandlerThread:80849 [interfaces.py:finish():175] Joined network
+2023-03-17 17:29:04,643 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,643 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-17 17:29:04,643 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 3
+2023-03-17 17:29:04,643 DEBUG   SenderThread:80849 [sender.py:send():336] send: stats
+2023-03-17 17:29:04,643 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,643 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-17 17:29:04,644 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,644 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-17 17:29:04,644 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 4
+2023-03-17 17:29:04,644 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,644 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-17 17:29:04,644 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,644 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-17 17:29:04,644 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 5
+2023-03-17 17:29:04,644 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,644 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-17 17:29:04,645 DEBUG   SenderThread:80849 [sender.py:send():336] send: summary
+2023-03-17 17:29:04,645 INFO    SenderThread:80849 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 17:29:04,645 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,645 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-17 17:29:04,645 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 6
+2023-03-17 17:29:04,645 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,645 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-17 17:29:04,646 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,646 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-17 17:29:04,649 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:29:04,724 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/wandb-summary.json
+2023-03-17 17:29:04,724 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/output.log
+2023-03-17 17:29:04,995 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 7
+2023-03-17 17:29:04,996 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:04,996 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-17 17:29:04,997 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:04,997 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-17 17:29:05,604 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-17 17:29:05,725 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/config.yaml
+2023-03-17 17:29:06,612 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 8
+2023-03-17 17:29:06,612 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: poll_exit
+2023-03-17 17:29:06,613 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:06,613 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-17 17:29:06,613 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:06,613 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-17 17:29:06,614 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 9
+2023-03-17 17:29:06,614 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:06,614 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-17 17:29:06,614 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:06,614 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-17 17:29:06,614 INFO    SenderThread:80849 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-17 17:29:06,726 INFO    Thread-13 :80849 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/output.log
+2023-03-17 17:29:06,728 INFO    SenderThread:80849 [dir_watcher.py:finish():392] scan: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files
+2023-03-17 17:29:06,728 INFO    SenderThread:80849 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/output.log output.log
+2023-03-17 17:29:06,729 INFO    SenderThread:80849 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/config.yaml config.yaml
+2023-03-17 17:29:06,736 INFO    SenderThread:80849 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/wandb-summary.json wandb-summary.json
+2023-03-17 17:29:06,740 INFO    SenderThread:80849 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/wandb-metadata.json wandb-metadata.json
+2023-03-17 17:29:06,740 INFO    SenderThread:80849 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/conda-environment.yaml conda-environment.yaml
+2023-03-17 17:29:06,740 INFO    SenderThread:80849 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/requirements.txt requirements.txt
+2023-03-17 17:29:06,741 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 10
+2023-03-17 17:29:06,741 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:06,745 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-17 17:29:06,757 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:06,757 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-17 17:29:06,757 INFO    SenderThread:80849 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-17 17:29:07,537 INFO    wandb-upload_4:80849 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/requirements.txt
+2023-03-17 17:29:07,680 INFO    wandb-upload_2:80849 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/wandb-summary.json
+2023-03-17 17:29:07,729 INFO    wandb-upload_3:80849 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/conda-environment.yaml
+2023-03-17 17:29:07,732 INFO    wandb-upload_1:80849 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/config.yaml
+2023-03-17 17:29:07,750 INFO    wandb-upload_0:80849 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/files/output.log
+2023-03-17 17:29:07,951 INFO    Thread-12 :80849 [sender.py:transition_state():587] send defer: 11
+2023-03-17 17:29:07,952 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:07,952 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-17 17:29:07,953 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:07,953 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-17 17:29:07,954 INFO    SenderThread:80849 [file_pusher.py:join():167] waiting for file pusher
+2023-03-17 17:29:07,954 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 12
+2023-03-17 17:29:07,954 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:07,955 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-17 17:29:07,955 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:07,956 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-17 17:29:08,263 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 13
+2023-03-17 17:29:08,264 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:08,264 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-17 17:29:08,265 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:08,265 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-17 17:29:08,266 INFO    SenderThread:80849 [sender.py:transition_state():587] send defer: 14
+2023-03-17 17:29:08,266 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:29:08,266 INFO    HandlerThread:80849 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-17 17:29:08,268 DEBUG   SenderThread:80849 [sender.py:send():336] send: final
+2023-03-17 17:29:08,268 DEBUG   SenderThread:80849 [sender.py:send():336] send: footer
+2023-03-17 17:29:08,268 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:29:08,269 INFO    SenderThread:80849 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-17 17:29:08,270 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-17 17:29:08,271 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: poll_exit
+2023-03-17 17:29:08,272 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: server_info
+2023-03-17 17:29:08,274 DEBUG   SenderThread:80849 [sender.py:send_request():363] send_request: server_info
+2023-03-17 17:29:08,279 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-17 17:29:08,280 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-17 17:29:08,901 INFO    MainThread:80849 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-03-17 17:29:08,901 INFO    MainThread:80849 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-03-17 17:29:08,901 INFO    MainThread:80849 [wandb_run.py:_footer_sync_info():3398] logging synced files
+2023-03-17 17:29:08,902 DEBUG   HandlerThread:80849 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-17 17:29:08,902 INFO    HandlerThread:80849 [handler.py:finish():841] shutting down handler
+2023-03-17 17:29:09,274 INFO    WriterThread:80849 [datastore.py:close():299] close: /home/tharikh/dl-ass-1/wandb/run-20230317_172843-2vwlgo3d/run-2vwlgo3d.wandb
+2023-03-17 17:29:09,901 INFO    SenderThread:80849 [sender.py:finish():1493] shutting down sender
+2023-03-17 17:29:09,902 INFO    SenderThread:80849 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-17 17:29:09,902 INFO    SenderThread:80849 [file_pusher.py:join():167] waiting for file pusher

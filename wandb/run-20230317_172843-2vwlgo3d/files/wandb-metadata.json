@@ -1,0 +1,85 @@
+{
+    "os": "Linux-5.4.0-144-generic-x86_64-with-glibc2.10",
+    "python": "3.8.8",
+    "heartbeatAt": "2023-03-17T11:58:44.832478",
+    "startedAt": "2023-03-17T11:58:43.944584",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": null,
+        "commit": "4a9010aa73cd335acff4c34a834f72f1d2c8306a"
+    },
+    "email": "tharikhlegend@gmail.com",
+    "root": "/home/tharikh/dl-ass-1",
+    "host": "legend",
+    "username": "tharikh",
+    "executable": "/home/tharikh/anaconda3/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2671.049625,
+        "min": 400.0,
+        "max": 3900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2637.684,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2723.569,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2623.255,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2549.732,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2782.597,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2714.614,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2657.676,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 2679.27,
+            "min": 400.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "total": 54.63949966430664,
+        "used": 12.451610565185547
+    },
+    "gpu": "NVIDIA GeForce MX250",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce MX250",
+            "memory_total": 2099904512
+        }
+    ],
+    "memory": {
+        "total": 7.61993408203125
+    }
+}

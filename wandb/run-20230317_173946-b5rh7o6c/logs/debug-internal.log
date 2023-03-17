@@ -1,0 +1,220 @@
+2023-03-17 17:39:46,389 INFO    StreamThr :81407 [internal.py:wandb_internal():87] W&B internal server running at pid: 81407, started at: 2023-03-17 17:39:46.389023
+2023-03-17 17:39:46,391 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: status
+2023-03-17 17:39:46,397 INFO    WriterThread:81407 [datastore.py:open_for_write():85] open: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/run-b5rh7o6c.wandb
+2023-03-17 17:39:46,398 DEBUG   SenderThread:81407 [sender.py:send():336] send: header
+2023-03-17 17:39:46,411 DEBUG   SenderThread:81407 [sender.py:send():336] send: run
+2023-03-17 17:39:47,375 INFO    SenderThread:81407 [dir_watcher.py:__init__():216] watching files in: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files
+2023-03-17 17:39:47,375 INFO    SenderThread:81407 [sender.py:_start_run_threads():1067] run started: b5rh7o6c with start time 1679054986.391592
+2023-03-17 17:39:47,375 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 17:39:47,376 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: check_version
+2023-03-17 17:39:47,376 INFO    SenderThread:81407 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 17:39:47,376 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: check_version
+2023-03-17 17:39:47,781 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: run_start
+2023-03-17 17:39:47,784 DEBUG   HandlerThread:81407 [system_info.py:__init__():31] System info init
+2023-03-17 17:39:47,784 DEBUG   HandlerThread:81407 [system_info.py:__init__():46] System info init done
+2023-03-17 17:39:47,785 INFO    HandlerThread:81407 [system_monitor.py:start():151] Starting system monitor
+2023-03-17 17:39:47,785 INFO    SystemMonitor:81407 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-17 17:39:47,785 INFO    HandlerThread:81407 [system_monitor.py:probe():172] Collecting system info
+2023-03-17 17:39:47,785 INFO    SystemMonitor:81407 [interfaces.py:start():168] Started cpu
+2023-03-17 17:39:47,786 INFO    SystemMonitor:81407 [interfaces.py:start():168] Started disk
+2023-03-17 17:39:47,787 INFO    SystemMonitor:81407 [interfaces.py:start():168] Started gpu
+2023-03-17 17:39:47,788 INFO    SystemMonitor:81407 [interfaces.py:start():168] Started memory
+2023-03-17 17:39:47,788 INFO    SystemMonitor:81407 [interfaces.py:start():168] Started network
+2023-03-17 17:39:47,793 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:47,793 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:47,815 DEBUG   HandlerThread:81407 [system_info.py:probe():195] Probing system
+2023-03-17 17:39:47,827 DEBUG   HandlerThread:81407 [system_info.py:_probe_git():180] Probing git
+2023-03-17 17:39:47,855 DEBUG   HandlerThread:81407 [system_info.py:_probe_git():188] Probing git done
+2023-03-17 17:39:47,855 DEBUG   HandlerThread:81407 [system_info.py:probe():241] Probing system done
+2023-03-17 17:39:47,855 DEBUG   HandlerThread:81407 [system_monitor.py:probe():181] {'os': 'Linux-5.4.0-144-generic-x86_64-with-glibc2.10', 'python': '3.8.8', 'heartbeatAt': '2023-03-17T12:09:47.816122', 'startedAt': '2023-03-17T12:09:46.369911', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'main.py', 'codePath': 'main.py', 'git': {'remote': None, 'commit': '4a9010aa73cd335acff4c34a834f72f1d2c8306a'}, 'email': 'tharikhlegend@gmail.com', 'root': '/home/tharikh/dl-ass-1', 'host': 'legend', 'username': 'tharikh', 'executable': '/home/tharikh/anaconda3/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1552.9581249999997, 'min': 400.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 1557.578, 'min': 400.0, 'max': 3900.0}, {'current': 1751.815, 'min': 400.0, 'max': 3900.0}, {'current': 1474.763, 'min': 400.0, 'max': 3900.0}, {'current': 1943.788, 'min': 400.0, 'max': 3900.0}, {'current': 1487.917, 'min': 400.0, 'max': 3900.0}, {'current': 1448.498, 'min': 400.0, 'max': 3900.0}, {'current': 1159.123, 'min': 400.0, 'max': 3900.0}, {'current': 1600.183, 'min': 400.0, 'max': 3900.0}], 'disk': {'total': 54.63949966430664, 'used': 12.45162582397461}, 'gpu': 'NVIDIA GeForce MX250', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce MX250', 'memory_total': 2099904512}], 'memory': {'total': 7.61993408203125}}
+2023-03-17 17:39:47,856 INFO    HandlerThread:81407 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-17 17:39:47,856 INFO    HandlerThread:81407 [system_monitor.py:probe():185] Publishing system info
+2023-03-17 17:39:47,856 DEBUG   HandlerThread:81407 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-17 17:39:47,858 DEBUG   HandlerThread:81407 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-17 17:39:47,858 DEBUG   HandlerThread:81407 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-17 17:39:48,381 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/requirements.txt
+2023-03-17 17:39:48,382 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/wandb-summary.json
+2023-03-17 17:39:48,383 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/conda-environment.yaml
+2023-03-17 17:39:49,799 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:49,799 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:51,803 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:51,803 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:53,804 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:53,804 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:55,805 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:55,805 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:57,807 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:57,807 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:58,386 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/conda-environment.yaml
+2023-03-17 17:39:58,400 DEBUG   HandlerThread:81407 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-17 17:39:58,401 INFO    HandlerThread:81407 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-17 17:39:58,410 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:39:58,411 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 17:39:58,411 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:39:58,411 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 17:39:58,412 DEBUG   SenderThread:81407 [sender.py:send():336] send: files
+2023-03-17 17:39:58,412 INFO    SenderThread:81407 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-17 17:39:58,422 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 17:39:58,423 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 17:39:58,760 DEBUG   SenderThread:81407 [sender.py:send():336] send: telemetry
+2023-03-17 17:39:58,761 DEBUG   SenderThread:81407 [sender.py:send():336] send: telemetry
+2023-03-17 17:39:58,763 DEBUG   SenderThread:81407 [sender.py:send():336] send: run
+2023-03-17 17:39:59,163 INFO    SenderThread:81407 [sender.py:send_run():944] updated run: b5rh7o6c
+2023-03-17 17:39:59,386 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/config.yaml
+2023-03-17 17:39:59,387 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/wandb-metadata.json
+2023-03-17 17:39:59,411 INFO    wandb-upload_0:81407 [upload_job.py:push():138] Uploaded file /tmp/tmpim6bel4fwandb/5vqkqv9e-wandb-metadata.json
+2023-03-17 17:39:59,808 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:39:59,809 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:01,810 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:01,810 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:02,164 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:40:03,811 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:03,811 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:05,812 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:05,813 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:07,165 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:40:07,814 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:07,814 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:09,815 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:09,816 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:11,817 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:11,817 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:12,166 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:40:13,437 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 17:40:13,458 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 17:40:13,818 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:13,819 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:14,393 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/output.log
+2023-03-17 17:40:15,820 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:15,820 ERROR   gpu       :81407 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 17:40:16,222 DEBUG   SenderThread:81407 [sender.py:send():336] send: exit
+2023-03-17 17:40:16,223 INFO    SenderThread:81407 [sender.py:send_exit():559] handling exit code: 1
+2023-03-17 17:40:16,223 INFO    SenderThread:81407 [sender.py:send_exit():561] handling runtime: 28
+2023-03-17 17:40:16,223 INFO    SenderThread:81407 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 17:40:16,224 INFO    SenderThread:81407 [sender.py:send_exit():567] send defer
+2023-03-17 17:40:16,224 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,224 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-17 17:40:16,224 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,224 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-17 17:40:16,225 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 1
+2023-03-17 17:40:16,225 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,225 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-17 17:40:16,225 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,225 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-17 17:40:16,225 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 2
+2023-03-17 17:40:16,226 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,226 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-17 17:40:16,226 INFO    HandlerThread:81407 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-17 17:40:16,227 DEBUG   SystemMonitor:81407 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-17 17:40:16,227 DEBUG   SystemMonitor:81407 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-17 17:40:16,227 DEBUG   SystemMonitor:81407 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-17 17:40:16,228 INFO    HandlerThread:81407 [interfaces.py:finish():175] Joined cpu
+2023-03-17 17:40:16,229 INFO    HandlerThread:81407 [interfaces.py:finish():175] Joined disk
+2023-03-17 17:40:16,289 ERROR   gpu       :81407 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2023-03-17 17:40:16,289 INFO    HandlerThread:81407 [interfaces.py:finish():175] Joined gpu
+2023-03-17 17:40:16,289 INFO    HandlerThread:81407 [interfaces.py:finish():175] Joined memory
+2023-03-17 17:40:16,289 INFO    HandlerThread:81407 [interfaces.py:finish():175] Joined network
+2023-03-17 17:40:16,290 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,290 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-17 17:40:16,290 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 3
+2023-03-17 17:40:16,290 DEBUG   SenderThread:81407 [sender.py:send():336] send: stats
+2023-03-17 17:40:16,291 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,291 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-17 17:40:16,291 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,291 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-17 17:40:16,292 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 4
+2023-03-17 17:40:16,292 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,292 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-17 17:40:16,292 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,292 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-17 17:40:16,293 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 5
+2023-03-17 17:40:16,293 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,293 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-17 17:40:16,293 DEBUG   SenderThread:81407 [sender.py:send():336] send: summary
+2023-03-17 17:40:16,294 INFO    SenderThread:81407 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 17:40:16,294 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,294 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-17 17:40:16,294 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 6
+2023-03-17 17:40:16,295 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,295 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-17 17:40:16,295 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,295 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-17 17:40:16,301 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 17:40:16,394 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/wandb-summary.json
+2023-03-17 17:40:16,395 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/output.log
+2023-03-17 17:40:16,685 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 7
+2023-03-17 17:40:16,685 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:16,685 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-17 17:40:16,686 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:16,686 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-17 17:40:17,223 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-17 17:40:17,395 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/config.yaml
+2023-03-17 17:40:18,229 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 8
+2023-03-17 17:40:18,231 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: poll_exit
+2023-03-17 17:40:18,232 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:18,232 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-17 17:40:18,233 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:18,233 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-17 17:40:18,234 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 9
+2023-03-17 17:40:18,234 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:18,234 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-17 17:40:18,235 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:18,235 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-17 17:40:18,235 INFO    SenderThread:81407 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-17 17:40:18,396 INFO    Thread-13 :81407 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/output.log
+2023-03-17 17:40:18,398 INFO    SenderThread:81407 [dir_watcher.py:finish():392] scan: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files
+2023-03-17 17:40:18,398 INFO    SenderThread:81407 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/output.log output.log
+2023-03-17 17:40:18,399 INFO    SenderThread:81407 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/config.yaml config.yaml
+2023-03-17 17:40:18,399 INFO    SenderThread:81407 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/wandb-summary.json wandb-summary.json
+2023-03-17 17:40:18,409 INFO    SenderThread:81407 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/wandb-metadata.json wandb-metadata.json
+2023-03-17 17:40:18,410 INFO    SenderThread:81407 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/conda-environment.yaml conda-environment.yaml
+2023-03-17 17:40:18,423 INFO    SenderThread:81407 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/requirements.txt requirements.txt
+2023-03-17 17:40:18,423 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 10
+2023-03-17 17:40:18,424 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:18,424 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-17 17:40:18,432 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:18,439 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-17 17:40:18,439 INFO    SenderThread:81407 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-17 17:40:19,246 INFO    wandb-upload_2:81407 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/wandb-summary.json
+2023-03-17 17:40:19,387 INFO    wandb-upload_3:81407 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/conda-environment.yaml
+2023-03-17 17:40:19,471 INFO    wandb-upload_4:81407 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/requirements.txt
+2023-03-17 17:40:19,644 INFO    wandb-upload_1:81407 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/output.log
+2023-03-17 17:40:19,649 INFO    wandb-upload_0:81407 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/files/config.yaml
+2023-03-17 17:40:19,851 INFO    Thread-12 :81407 [sender.py:transition_state():587] send defer: 11
+2023-03-17 17:40:19,851 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:19,852 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-17 17:40:19,853 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:19,853 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-17 17:40:19,853 INFO    SenderThread:81407 [file_pusher.py:join():167] waiting for file pusher
+2023-03-17 17:40:19,853 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 12
+2023-03-17 17:40:19,854 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:19,854 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-17 17:40:19,855 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:19,855 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-17 17:40:20,161 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 13
+2023-03-17 17:40:20,162 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:20,162 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-17 17:40:20,163 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:20,163 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-17 17:40:20,164 INFO    SenderThread:81407 [sender.py:transition_state():587] send defer: 14
+2023-03-17 17:40:20,164 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 17:40:20,164 INFO    HandlerThread:81407 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-17 17:40:20,166 DEBUG   SenderThread:81407 [sender.py:send():336] send: final
+2023-03-17 17:40:20,166 DEBUG   SenderThread:81407 [sender.py:send():336] send: footer
+2023-03-17 17:40:20,166 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: defer
+2023-03-17 17:40:20,167 INFO    SenderThread:81407 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-17 17:40:20,168 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-17 17:40:20,169 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: poll_exit
+2023-03-17 17:40:20,170 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: server_info
+2023-03-17 17:40:20,172 DEBUG   SenderThread:81407 [sender.py:send_request():363] send_request: server_info
+2023-03-17 17:40:20,178 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-17 17:40:20,179 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-17 17:40:21,107 INFO    MainThread:81407 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-03-17 17:40:21,107 INFO    MainThread:81407 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-03-17 17:40:21,107 INFO    MainThread:81407 [wandb_run.py:_footer_sync_info():3398] logging synced files
+2023-03-17 17:40:21,107 DEBUG   HandlerThread:81407 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-17 17:40:21,108 INFO    HandlerThread:81407 [handler.py:finish():841] shutting down handler
+2023-03-17 17:40:21,172 INFO    WriterThread:81407 [datastore.py:close():299] close: /home/tharikh/dl-ass-1/wandb/run-20230317_173946-b5rh7o6c/run-b5rh7o6c.wandb
+2023-03-17 17:40:22,107 INFO    SenderThread:81407 [sender.py:finish():1493] shutting down sender
+2023-03-17 17:40:22,107 INFO    SenderThread:81407 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-17 17:40:22,107 INFO    SenderThread:81407 [file_pusher.py:join():167] waiting for file pusher

@@ -1,6 +1,9 @@
 import numpy as np
 import copy
-
+from weights import *
+from activations import *
+from optimizers import *
+from loss_file import *
 # Base class for all neural networks
 
 class NeuralNetwork():
@@ -16,9 +19,6 @@ class NeuralNetwork():
     pass
   def train(self):
     pass
-
-
-# Neural Network for this particular neural network
 
 # Neural Network for this particular neural network
 
@@ -79,6 +79,13 @@ class NN(NeuralNetwork):
 
     return score/size * 100
 
+  def findOneHotVector(self,Y_hat, Y):
+    vector = np.zeros(Y_hat.shape)
+    for i in range(Y_hat.shape[1]):
+      vector[:,i][Y[i]] = 1
+    
+    return vector
+
   def feedforward(self, X):
     a = self.W[0].T @ X + self.b[0]
     hidden_layer_input = self.activate_hidden(a)
@@ -118,10 +125,10 @@ class NN(NeuralNetwork):
 
     return a_values,h_values
 
-  def backpropogation(self, X, Y, a_values, h_values, loss):
+  def backpropogation(self, X, Y, a_values, h_values):
     size = len(h_values)
     data_size = Y.shape[0]
-    delta_ak = -(loss.findOneHotVector(h_values[size - 1],Y) - h_values[size - 1])
+    delta_ak = -(self.findOneHotVector(h_values[size - 1],Y) - h_values[size - 1])
     delta_W=[]
     delta_b=[]
 
@@ -143,7 +150,7 @@ class NN(NeuralNetwork):
 
     return delta_W,delta_b
   
-  def training(self, X, Y, X_val, Y_val,loss = Loss() ,epochs = 10 , weight_decay = 0 ,optimizer_name="gd", lr=0.01, batch_size=32,parameters=[]):
+  def training(self, X, Y, X_val, Y_val,loss ,epochs = 10 , weight_decay = 0 ,optimizer_name="gd", lr=0.01, batch_size=32,parameters=[]):
     optimize = Optimizer(optimizer_name).optimize()
     
     num_data = X.shape[1]
@@ -152,8 +159,6 @@ class NN(NeuralNetwork):
     # Random shuffling of data
     indexes_for_batch = np.arange(num_data)
     np.random.shuffle(indexes_for_batch)
-    
-    
 
     return optimize(self, X, Y, X_val, Y_val ,loss, lr, epochs, batch_size, indexes_for_batch, weight_decay=weight_decay)
 #     print(f'train accuracy: {self.calculateAccuracy(X,Y)}')

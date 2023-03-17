@@ -1,0 +1,10 @@
+
+epoch: 0 => loss = 0.40960802064282803
+Traceback (most recent call last):
+  File "main.py", line 68, in <module>
+    val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list = nn.training(X, Y, X_valid, Y_valid, loss = loss, epochs = epochs, weight_decay = weight_decay, optimizer_name = optimizer_name,lr = lr, batch_size = batch_size,parameters=parameters)
+  File "/home/tharikh/dl-ass-1/network.py", line 163, in training
+    return optimize(self, X, Y, X_val, Y_val ,loss, lr, epochs, batch_size, indexes_for_batch, weight_decay=weight_decay)
+  File "/home/tharikh/dl-ass-1/optimizers.py", line 100, in momentum
+    validation_accuracy = nn.calculateAccuracy(X_valid, Y_val)
+NameError: name 'X_valid' is not defined

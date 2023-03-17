@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "main.py", line 71, in <module>
+    val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list = nn.training(X, Y, X_valid, Y_valid, loss = loss, epochs = epochs, weight_decay = weight_decay, optimizer_name = optimizer_name,lr = lr, batch_size = batch_size,parameters=parameters)
+  File "/home/tharikh/dl-ass-1/network.py", line 149, in training
+    optimize = Optimizer(optimizer_name).optimize()
+NameError: name 'Optimizer' is not defined
