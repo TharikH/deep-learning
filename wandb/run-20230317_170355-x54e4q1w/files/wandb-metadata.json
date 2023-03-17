@@ -1,0 +1,85 @@
+{
+    "os": "Linux-5.4.0-144-generic-x86_64-with-glibc2.10",
+    "python": "3.8.8",
+    "heartbeatAt": "2023-03-17T11:33:56.022784",
+    "startedAt": "2023-03-17T11:33:55.215352",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": null,
+        "commit": "4a9010aa73cd335acff4c34a834f72f1d2c8306a"
+    },
+    "email": "tharikhlegend@gmail.com",
+    "root": "/home/tharikh/dl-ass-1",
+    "host": "legend",
+    "username": "tharikh",
+    "executable": "/home/tharikh/anaconda3/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3500.014375,
+        "min": 400.0,
+        "max": 3900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3500.024,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.035,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.0,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.017,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.0,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.016,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.017,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.006,
+            "min": 400.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "total": 54.63949966430664,
+        "used": 12.451583862304688
+    },
+    "gpu": "NVIDIA GeForce MX250",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce MX250",
+            "memory_total": 2099904512
+        }
+    ],
+    "memory": {
+        "total": 7.61993408203125
+    }
+}

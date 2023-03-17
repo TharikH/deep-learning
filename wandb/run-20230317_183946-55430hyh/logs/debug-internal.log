@@ -1,0 +1,175 @@
+2023-03-17 18:39:46,780 INFO    StreamThr :85105 [internal.py:wandb_internal():87] W&B internal server running at pid: 85105, started at: 2023-03-17 18:39:46.779625
+2023-03-17 18:39:46,782 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status
+2023-03-17 18:39:46,808 INFO    WriterThread:85105 [datastore.py:open_for_write():85] open: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/run-55430hyh.wandb
+2023-03-17 18:39:46,809 DEBUG   SenderThread:85105 [sender.py:send():336] send: header
+2023-03-17 18:39:46,828 DEBUG   SenderThread:85105 [sender.py:send():336] send: run
+2023-03-17 18:39:47,880 INFO    SenderThread:85105 [dir_watcher.py:__init__():216] watching files in: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files
+2023-03-17 18:39:47,880 INFO    SenderThread:85105 [sender.py:_start_run_threads():1067] run started: 55430hyh with start time 1679058586.782616
+2023-03-17 18:39:47,880 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:39:47,881 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:39:47,890 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: check_version
+2023-03-17 18:39:47,891 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: check_version
+2023-03-17 18:39:47,952 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: run_start
+2023-03-17 18:39:47,956 DEBUG   HandlerThread:85105 [system_info.py:__init__():31] System info init
+2023-03-17 18:39:47,956 DEBUG   HandlerThread:85105 [system_info.py:__init__():46] System info init done
+2023-03-17 18:39:47,956 INFO    HandlerThread:85105 [system_monitor.py:start():151] Starting system monitor
+2023-03-17 18:39:47,956 INFO    SystemMonitor:85105 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-17 18:39:47,957 INFO    HandlerThread:85105 [system_monitor.py:probe():172] Collecting system info
+2023-03-17 18:39:47,957 INFO    SystemMonitor:85105 [interfaces.py:start():168] Started cpu
+2023-03-17 18:39:47,959 INFO    SystemMonitor:85105 [interfaces.py:start():168] Started disk
+2023-03-17 18:39:47,960 INFO    SystemMonitor:85105 [interfaces.py:start():168] Started gpu
+2023-03-17 18:39:47,963 INFO    SystemMonitor:85105 [interfaces.py:start():168] Started memory
+2023-03-17 18:39:47,963 INFO    SystemMonitor:85105 [interfaces.py:start():168] Started network
+2023-03-17 18:39:47,966 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:47,966 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:47,978 DEBUG   HandlerThread:85105 [system_info.py:probe():195] Probing system
+2023-03-17 18:39:47,982 DEBUG   HandlerThread:85105 [system_info.py:_probe_git():180] Probing git
+2023-03-17 18:39:47,994 DEBUG   HandlerThread:85105 [system_info.py:_probe_git():188] Probing git done
+2023-03-17 18:39:47,994 DEBUG   HandlerThread:85105 [system_info.py:probe():241] Probing system done
+2023-03-17 18:39:47,994 DEBUG   HandlerThread:85105 [system_monitor.py:probe():181] {'os': 'Linux-5.4.0-144-generic-x86_64-with-glibc2.10', 'python': '3.8.8', 'heartbeatAt': '2023-03-17T13:09:47.978690', 'startedAt': '2023-03-17T13:09:46.768409', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'dl-ass-1/dl_assignment.ipynb', 'root': '/home/tharikh/dl-ass-1', 'git': {'remote': None, 'commit': '4a9010aa73cd335acff4c34a834f72f1d2c8306a'}, 'email': 'tharikhlegend@gmail.com', 'host': 'legend', 'username': 'tharikh', 'executable': '/home/tharikh/anaconda3/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3045.466625, 'min': 400.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 3186.063, 'min': 400.0, 'max': 3900.0}, {'current': 2923.09, 'min': 400.0, 'max': 3900.0}, {'current': 2948.89, 'min': 400.0, 'max': 3900.0}, {'current': 3192.581, 'min': 400.0, 'max': 3900.0}, {'current': 2999.599, 'min': 400.0, 'max': 3900.0}, {'current': 2920.038, 'min': 400.0, 'max': 3900.0}, {'current': 3122.866, 'min': 400.0, 'max': 3900.0}, {'current': 3070.606, 'min': 400.0, 'max': 3900.0}], 'disk': {'total': 54.63949966430664, 'used': 12.455780029296875}, 'gpu': 'NVIDIA GeForce MX250', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce MX250', 'memory_total': 2099904512}], 'memory': {'total': 7.61993408203125}}
+2023-03-17 18:39:47,994 INFO    HandlerThread:85105 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-17 18:39:47,994 INFO    HandlerThread:85105 [system_monitor.py:probe():185] Publishing system info
+2023-03-17 18:39:47,994 DEBUG   HandlerThread:85105 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-17 18:39:47,995 DEBUG   HandlerThread:85105 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-17 18:39:47,995 DEBUG   HandlerThread:85105 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-17 18:39:48,881 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/requirements.txt
+2023-03-17 18:39:48,881 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/conda-environment.yaml
+2023-03-17 18:39:48,881 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/wandb-summary.json
+2023-03-17 18:39:49,968 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:49,968 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:51,970 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:51,971 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:53,971 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:53,972 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:55,972 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:55,973 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:57,973 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:57,974 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:58,884 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/conda-environment.yaml
+2023-03-17 18:39:58,948 DEBUG   HandlerThread:85105 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-17 18:39:58,949 INFO    HandlerThread:85105 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-17 18:39:58,955 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:39:58,955 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:39:58,955 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:39:58,955 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:39:58,956 DEBUG   SenderThread:85105 [sender.py:send():336] send: files
+2023-03-17 18:39:58,956 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-17 18:39:58,975 DEBUG   SenderThread:85105 [sender.py:send():336] send: telemetry
+2023-03-17 18:39:58,976 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 18:39:58,976 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 18:39:59,317 DEBUG   SenderThread:85105 [sender.py:send():336] send: telemetry
+2023-03-17 18:39:59,318 DEBUG   SenderThread:85105 [sender.py:send():336] send: run
+2023-03-17 18:39:59,710 INFO    SenderThread:85105 [sender.py:send_run():944] updated run: 55430hyh
+2023-03-17 18:39:59,843 INFO    wandb-upload_0:85105 [upload_job.py:push():138] Uploaded file /tmp/tmpg0uck9hkwandb/gfur4prq-wandb-metadata.json
+2023-03-17 18:39:59,884 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/config.yaml
+2023-03-17 18:39:59,884 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/wandb-metadata.json
+2023-03-17 18:39:59,974 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:39:59,975 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:01,975 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:01,976 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:02,711 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:03,976 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:03,977 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:05,886 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:05,977 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:05,977 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:07,887 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:07,978 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:07,978 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:08,193 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:09,979 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:09,979 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:11,980 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:11,980 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:13,817 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:13,974 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:13,974 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:13,981 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:13,981 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:15,889 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:15,982 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:15,982 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:18,029 ERROR   gpu       :85105 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2023-03-17 18:40:18,029 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:18,029 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:18,823 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:18,975 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:19,890 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/config.yaml
+2023-03-17 18:40:20,030 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:20,030 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:21,891 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:22,031 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:22,031 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:23,976 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:24,032 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:24,032 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:25,140 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:26,033 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:26,033 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:28,034 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:28,034 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:28,982 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:29,894 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:30,035 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:30,035 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:30,396 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:32,036 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:32,036 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:33,983 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:34,037 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:34,037 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:35,816 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:36,038 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:36,038 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:37,896 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:38,038 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:38,039 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:38,984 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:40,039 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:40,040 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:40,816 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:42,040 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:42,040 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:43,898 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:43,984 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:44,041 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:44,041 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:46,042 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:46,042 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:46,136 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:47,963 DEBUG   SystemMonitor:85105 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-17 18:40:47,965 DEBUG   SenderThread:85105 [sender.py:send():336] send: stats
+2023-03-17 18:40:48,088 ERROR   gpu       :85105 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2023-03-17 18:40:48,089 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:48,089 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:48,985 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:50,089 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:50,090 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:51,422 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:51,901 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:52,091 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:52,091 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:53,986 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:40:54,092 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:54,092 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:56,093 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:56,093 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:56,423 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:40:57,903 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:40:58,094 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:58,094 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:40:58,987 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:41:00,095 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:00,095 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:01,725 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:41:02,096 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:02,097 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:03,987 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:41:04,097 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:04,098 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:05,905 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:41:06,098 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:06,099 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:07,182 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:41:08,100 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:08,100 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported

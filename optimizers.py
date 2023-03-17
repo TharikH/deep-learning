@@ -1,10 +1,7 @@
-!pip install wandb
 import numpy as np
 import copy
-import wandb
+from weights import *
 
-
-# classes having all the optimizers
 # classes having all the optimizers
 class Optimizer():
   def __init__(self,optimizer_name="gd"):
@@ -13,7 +10,7 @@ class Optimizer():
         "gd":self.gradient_descent,
         "sgd":self.gradient_descent,
         "momentum":self.momentum,
-        "nesterov":self.nesterov,
+        "nag":self.nesterov,
         "rmsprop":self.rmsprop,
         "adam" : self.adam,
         "nadam" : self.nadam
@@ -40,20 +37,20 @@ class Optimizer():
 
         # self.W,self.b = self.initializeWeights()
         a_values,h_values = nn.forwardpropogation(X_batch)
-        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values, loss)
+        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values)
         # print(np.sum(delta_W[0], axis = 0))
         for j in range(nn.num_hidden_layer + 1):
           nn.W[j] = nn.W[j] - lr * delta_W[nn.num_hidden_layer - j] - lr*weight_decay*nn.W[j]
           nn.b[j] = nn.b[j] - lr * delta_b[nn.num_hidden_layer - j]
 
-#       Y_hat = nn.feedforward(X)
-#       loss_value = loss.crossEntropy(Y_hat,Y,weight_decay,nn.W)
-#       print(f"epoch: {epoch} => loss = {loss_value}")
+      Y_hat = nn.feedforward(X)
+      loss_value = loss(Y_hat,Y,weight_decay,nn.W)
+      print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss.crossEntropy(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss.crossEntropy(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
 
       validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
@@ -82,7 +79,7 @@ class Optimizer():
 
         # self.W,self.b = self.initializeWeights()
         a_values,h_values = nn.forwardpropogation(X_batch)
-        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values, loss)
+        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values)
         # print(np.sum(delta_W[0], axis = 0))
         for j in range(nn.num_hidden_layer + 1):
           ut_w[j] = beta*ut_w[j] + delta_W[nn.num_hidden_layer - j]
@@ -91,16 +88,16 @@ class Optimizer():
           nn.W[j] = nn.W[j] - lr * ut_w[j] - lr*weight_decay*nn.W[j]
           nn.b[j] = nn.b[j] - lr * ut_b[j]
 
-      # Y_hat = nn.feedforward(X)
-      # loss_value = loss.crossEntropy(Y_hat,Y)
-      # print(f"epoch: {epoch} => loss = {loss_value}")
+      Y_hat = nn.feedforward(X)
+      loss_value = loss(Y_hat,Y)
+      print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss.crossEntropy(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss.crossEntropy(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
 
-      validation_accuracy = nn.calculateAccuracy(X_valid, Y_val)
+      validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
 
       
@@ -137,7 +134,7 @@ class Optimizer():
           nn.b[k] = nn.b[k] - beta *  ut_b[k]
 
         
-        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values, loss)
+        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values)
         # print(np.sum(delta_W[0], axis = 0))
         for j in range(nn.num_hidden_layer + 1):
           ut_w[j] = beta*ut_w[j] + delta_W[nn.num_hidden_layer - j]
@@ -146,16 +143,16 @@ class Optimizer():
           nn.W[j] = old_W[j] - lr * ut_w[j] - lr*weight_decay*nn.W[j]
           nn.b[j] = old_b[j] - lr * ut_b[j]
 
-      # Y_hat = nn.feedforward(X)
-      # loss_value = loss.crossEntropy(Y_hat,Y)
-      # print(f"epoch: {epoch} => loss = {loss_value}")
+      Y_hat = nn.feedforward(X)
+      loss_value = loss(Y_hat,Y)
+      print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss.crossEntropy(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss.crossEntropy(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
 
-      validation_accuracy = nn.calculateAccuracy(X_valid, Y_val)
+      validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
 
       
@@ -186,7 +183,7 @@ class Optimizer():
 
         # self.W,self.b = self.initializeWeights()
         a_values,h_values = nn.forwardpropogation(X_batch)
-        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values, loss)
+        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values)
         # print(np.sum(delta_W[0], axis = 0))
         for j in range(nn.num_hidden_layer + 1):
           vt_w[j] = beta*vt_w[j] + (1 - beta) * np.multiply(delta_W[nn.num_hidden_layer - j],delta_W[nn.num_hidden_layer - j]) 
@@ -195,16 +192,16 @@ class Optimizer():
           nn.W[j] = nn.W[j] - np.divide(lr * delta_W[nn.num_hidden_layer - j],np.sqrt(vt_w[j] + epsilon)) - lr*weight_decay*nn.W[j]
           nn.b[j] = nn.b[j] - np.divide(lr * delta_b[nn.num_hidden_layer - j],np.sqrt(vt_b[j] + epsilon))
 
-      # Y_hat = nn.feedforward(X)
-      # loss_value = loss.crossEntropy(Y_hat,Y)
-      # print(f"epoch: {epoch} => loss = {loss_value}")
+      Y_hat = nn.feedforward(X)
+      loss_value = loss(Y_hat,Y)
+      print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss.crossEntropy(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss.crossEntropy(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
 
-      validation_accuracy = nn.calculateAccuracy(X_valid, Y_val)
+      validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
 
       
@@ -238,7 +235,7 @@ class Optimizer():
 
         # self.W,self.b = self.initializeWeights()
         a_values,h_values = nn.forwardpropogation(X_batch)
-        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values, loss)
+        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values)
         # print(np.sum(delta_W[0], axis = 0))
         for j in range(nn.num_hidden_layer + 1):
           mt_w[j] = beta1 * mt_w[j] + (1 - beta1) * delta_W[nn.num_hidden_layer - j]
@@ -257,16 +254,16 @@ class Optimizer():
           nn.W[j] = nn.W[j] - np.divide(lr * mt_w_dash,np.sqrt(vt_w_dash + epsilon)) - lr*weight_decay*nn.W[j]
           nn.b[j] = nn.b[j] - np.divide(lr * mt_b_dash,np.sqrt(vt_b_dash + epsilon))
 
-      # Y_hat = nn.feedforward(X)
-      # loss_value = loss.crossEntropy(Y_hat,Y)
-      # print(f"epoch: {epoch} => loss = {loss_value}")
+      Y_hat = nn.feedforward(X)
+      loss_value = loss(Y_hat,Y)
+      print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss.crossEntropy(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss.crossEntropy(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
 
-      validation_accuracy = nn.calculateAccuracy(X_valid, Y_val)
+      validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
 
       
@@ -300,7 +297,7 @@ class Optimizer():
 
         # self.W,self.b = self.initializeWeights()
         a_values,h_values = nn.forwardpropogation(X_batch)
-        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values, loss)
+        delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values)
         # print(np.sum(delta_W[0], axis = 0))
         for j in range(nn.num_hidden_layer + 1):
           mt_w[j] = beta1 * mt_w[j] + (1 - beta1) * delta_W[nn.num_hidden_layer - j]
@@ -322,16 +319,16 @@ class Optimizer():
           nn.W[j] = nn.W[j] - np.divide(w_update_numerator,np.sqrt(vt_w_dash + epsilon)) - lr*weight_decay*nn.W[j]
           nn.b[j] = nn.b[j] - np.divide(b_update_numerator,np.sqrt(vt_b_dash + epsilon))
 
-      # Y_hat = nn.feedforward(X)
-      # loss_value = loss.crossEntropy(Y_hat,Y)
-      # print(f"epoch: {epoch} => loss = {loss_value}")
+      Y_hat = nn.feedforward(X)
+      loss_value = loss(Y_hat,Y)
+      print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss.crossEntropy(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss.crossEntropy(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
 
-      validation_accuracy = nn.calculateAccuracy(X_valid, Y_val)
+      validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
 
       

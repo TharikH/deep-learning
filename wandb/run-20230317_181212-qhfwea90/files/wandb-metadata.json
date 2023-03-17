@@ -1,0 +1,84 @@
+{
+    "os": "Linux-5.4.0-144-generic-x86_64-with-glibc2.10",
+    "python": "3.8.8",
+    "heartbeatAt": "2023-03-17T12:42:26.329290",
+    "startedAt": "2023-03-17T12:42:12.199228",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "dl-ass-1/dl_assignment.ipynb",
+    "root": "/home/tharikh/dl-ass-1",
+    "git": {
+        "remote": null,
+        "commit": "4a9010aa73cd335acff4c34a834f72f1d2c8306a"
+    },
+    "email": "tharikhlegend@gmail.com",
+    "host": "legend",
+    "username": "tharikh",
+    "executable": "/home/tharikh/anaconda3/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 874.7402500000001,
+        "min": 400.0,
+        "max": 3900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 867.343,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 892.213,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 938.809,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 885.51,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 835.238,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 857.344,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 864.183,
+            "min": 400.0,
+            "max": 3900.0
+        },
+        {
+            "current": 857.282,
+            "min": 400.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "total": 54.63949966430664,
+        "used": 12.45654296875
+    },
+    "gpu": "NVIDIA GeForce MX250",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce MX250",
+            "memory_total": 2099904512
+        }
+    ],
+    "memory": {
+        "total": 7.61993408203125
+    }
+}

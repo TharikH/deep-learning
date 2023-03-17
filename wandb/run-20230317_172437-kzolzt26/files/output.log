@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "main.py", line 70, in <module>
+    nn = NN(input_size = input_size,output_size = output_size,num_samples = num_train_samples, num_hidden_layer = num_hidden_layer, hidden_layer_size = hidden_layer_size,data_name= data_name, hidden_layer_activation = hidden_layer_activation, output_layer_activation=output_layer_activation,weight_name = weight_name)
+  File "/home/tharikh/dl-ass-1/network.py", line 35, in __init__
+    self.activation_function = Activations()
+NameError: name 'Activations' is not defined
