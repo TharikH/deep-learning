@@ -68,16 +68,14 @@ wandb.init(project = args.wandb_project,entity=args.wandb_entity)
 
 wandb.run.name = f'hln_{num_hidden_layer}_hls_{hidden_size}_hla_{hidden_layer_activation}_winit_{weight_name}_ep_{epochs}_op_{optimizer_name}_lr_{lr}_bs_{batch_size}_wd_{weight_decay}_ln_{loss_name}'
 
-loss = Loss(loss_name).findLoss()
-
 # Neural network initialization and training start
-nn = NN(input_size = input_size,output_size = output_size,num_samples = num_train_samples, num_hidden_layer = num_hidden_layer, hidden_layer_size = hidden_layer_size,data_name= data_name, hidden_layer_activation = hidden_layer_activation, output_layer_activation=output_layer_activation,weight_name = weight_name)
-val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list = nn.training(X, Y, X_valid, Y_valid, loss = loss, epochs = epochs, weight_decay = weight_decay, optimizer_name = optimizer_name,lr = lr, batch_size = batch_size,parameters=parameters)
+nn = NN(input_size = input_size,output_size = output_size,num_samples = num_train_samples, num_hidden_layer = num_hidden_layer, hidden_layer_size = hidden_layer_size,data_name= data_name, hidden_layer_activation = hidden_layer_activation, output_layer_activation=output_layer_activation,weight_name = weight_name,loss_name=loss_name)
+val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list = nn.training(X, Y, X_valid, Y_valid, epochs = epochs, weight_decay = weight_decay, optimizer_name = optimizer_name,lr = lr, batch_size = batch_size,parameters=parameters)
 
 # Calculate accuracy and losses and logging it onto wandb
 
 test_predict = nn.feedforward(X_test)
-test_loss = loss(test_predict,Y_test)
+test_loss = nn.loss(test_predict,Y_test,weight_decay,nn.W)
 test_accuracy = nn.calculateAccuracy(X_test, Y_test)
 
 list_length = len(val_loss_list)

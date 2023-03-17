@@ -4,6 +4,18 @@ import copy
 #class having all required activations
 
 class Activations():
+  '''
+  It contains all activations required with its derivatives.
+  call object.activate(name) function to get the corresponding function, then pass vectors/matrix/values on to these fucntions
+  similarly call object.derivative(name) to get derivative function.
+  The names are :
+  -> sigmoid
+  -> softmax
+  -> tanh
+  -> relu
+  -> identity
+  
+  '''
   def __init__(self):
     self.activation_dict={
         "sigmoid":self.sigmoid,

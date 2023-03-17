@@ -7,7 +7,7 @@ def parsArg():
                         help='Project name used to track experiments in Weights & Biases dashboard')
     parser.add_argument('-we','--wandb_entity',default='cs22m058',
                         help='wandb entity name')
-    parser.add_argument('-','--dataset',default='fashion_mnist',choices=['fashion_mnist','mnist'],
+    parser.add_argument('-d','--dataset',default='fashion_mnist',choices=['fashion_mnist','mnist'],
                         help='Dataset to be used - choices: ["mnist", "fashion_mnist"]')
     parser.add_argument('-e','--epochs',default=10,type=int,
                         help='Number of epochs to train neural network')
