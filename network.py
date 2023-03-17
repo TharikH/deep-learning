@@ -23,7 +23,13 @@ class NeuralNetwork():
 # Neural Network for this particular neural network
 
 class NN(NeuralNetwork):
-  def __init__(self, num_samples = 60000, input_size = 784, output_size = 10, num_hidden_layer = 3, hidden_layer_size=np.array([64,64,64]), data_name = "Fashion_mnsit", hidden_layer_activation="relu", output_layer_activation="softmax", weight_name="xavier"):
+
+  '''
+  It contains the neural network desired for this application.
+  Hidden layers, its sizes etc are all dynamic and can be set.
+  
+  '''
+  def __init__(self, num_samples = 60000, input_size = 784, output_size = 10, num_hidden_layer = 3, hidden_layer_size=np.array([64,64,64]), data_name = "Fashion_mnsit", hidden_layer_activation="relu", output_layer_activation="softmax", weight_name="xavier",loss_name="cross_entropy"):
     self.num_samples = num_samples
     self.input_size = input_size
     self.output_size = output_size
@@ -32,10 +38,14 @@ class NN(NeuralNetwork):
     self.W, self.b = self.initializeWeights(weight_name)
     self.hidden_layer_activation = hidden_layer_activation
     self.output_layer_activation = output_layer_activation
+    self.loss_name = loss_name
     self.activation_function = Activations()
     self.activate_hidden = self.activation_function.activate(hidden_layer_activation)
     self.activate_hidden_derivative = self.activation_function.derivate(hidden_layer_activation)
     self.activate_output = self.activation_function.activate(output_layer_activation)
+    self.lossFunction = Loss(loss_name)
+    self.loss = self.lossFunction.findLoss()
+    self.lossDerivative = self.lossFunction.findDerivative()
     self.parameters = {
         "data_name":data_name,
         "num_samples":num_samples,
@@ -45,7 +55,8 @@ class NN(NeuralNetwork):
         "hidden_layer_size":hidden_layer_size,
         "hidden_layer_activation":hidden_layer_activation,
         "output_layer_activation":output_layer_activation,
-        "weight_init":weight_name
+        "weight_init":weight_name,
+        "loss_name":loss_name
     }
 
   def getParameters(self):
@@ -78,13 +89,6 @@ class NN(NeuralNetwork):
           score+=1
 
     return score/size * 100
-
-  def findOneHotVector(self,Y_hat, Y):
-    vector = np.zeros(Y_hat.shape)
-    for i in range(Y_hat.shape[1]):
-      vector[:,i][Y[i]] = 1
-    
-    return vector
 
   def feedforward(self, X):
     a = self.W[0].T @ X + self.b[0]
@@ -128,7 +132,7 @@ class NN(NeuralNetwork):
   def backpropogation(self, X, Y, a_values, h_values):
     size = len(h_values)
     data_size = Y.shape[0]
-    delta_ak = -(self.findOneHotVector(h_values[size - 1],Y) - h_values[size - 1])
+    delta_ak = self.lossDerivative(h_values[size - 1],Y)
     delta_W=[]
     delta_b=[]
 
@@ -150,7 +154,7 @@ class NN(NeuralNetwork):
 
     return delta_W,delta_b
   
-  def training(self, X, Y, X_val, Y_val,loss ,epochs = 10 , weight_decay = 0 ,optimizer_name="gd", lr=0.01, batch_size=32,parameters=[]):
+  def training(self, X, Y, X_val, Y_val ,epochs = 10 , weight_decay = 0 ,optimizer_name="gd", lr=0.01, batch_size=32,parameters=[]):
     optimize = Optimizer(optimizer_name).optimize()
     
     num_data = X.shape[1]
@@ -160,5 +164,5 @@ class NN(NeuralNetwork):
     indexes_for_batch = np.arange(num_data)
     np.random.shuffle(indexes_for_batch)
 
-    return optimize(self, X, Y, X_val, Y_val ,loss, lr, epochs, batch_size, indexes_for_batch, weight_decay=weight_decay)
+    return optimize(self, X, Y, X_val, Y_val , lr, epochs, batch_size, indexes_for_batch, weight_decay=weight_decay)
 #     print(f'train accuracy: {self.calculateAccuracy(X,Y)}')

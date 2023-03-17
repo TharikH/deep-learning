@@ -4,6 +4,23 @@ from weights import *
 
 # classes having all the optimizers
 class Optimizer():
+    
+  '''
+  It contains all optimizers. initialize the object with name of optimizer
+  call object.optimize() function to get the corresponding function, then pass appropriate parameter
+  like training data, validation data, learning rate etc.
+    
+  The initializations are :
+    -> gradient descent
+    -> stochastic gradient descent
+    -> momentum
+    -> nesterov
+    -> rmsprop
+    -> adam
+    -> nadam
+  
+  '''
+
   def __init__(self,optimizer_name="gd"):
     self.optimizer_name = optimizer_name
     self.optimizer_dict={
@@ -20,7 +37,7 @@ class Optimizer():
     return self.optimizer_dict[self.optimizer_name]
     
   
-  def gradient_descent(self, nn, X, Y, X_val, Y_val, loss, lr, epochs, batch_size,indexes_for_batch,parameters = [], weight_decay = 0):
+  def gradient_descent(self, nn, X, Y, X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [], weight_decay = 0):
 
     num_data = X.shape[1]
 
@@ -44,25 +61,26 @@ class Optimizer():
           nn.b[j] = nn.b[j] - lr * delta_b[nn.num_hidden_layer - j]
 
       Y_hat = nn.feedforward(X)
-      loss_value = loss(Y_hat,Y,weight_decay,nn.W)
+      loss_value = nn.loss(Y_hat,Y,weight_decay,nn.W)
       print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = nn.loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = nn.loss(y_train_predict,Y,weight_decay,nn.W)
 
       validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
 
+      
       val_loss_list.append(validation_loss)
       val_accuracy_list.append(validation_accuracy)
       train_loss_list.append(training_loss)
       train_accuracy_list.append(training_accuracy)
     
     return val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list
-
-  def momentum(self, nn, X, Y, X_val, Y_val, loss, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9], weight_decay = 0):
+    
+  def momentum(self, nn, X, Y, X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9], weight_decay = 0):
     num_data = X.shape[1]
     ut_w,ut_b = nn.initializeWeights("zero")
     beta = parameters[0]
@@ -89,13 +107,13 @@ class Optimizer():
           nn.b[j] = nn.b[j] - lr * ut_b[j]
 
       Y_hat = nn.feedforward(X)
-      loss_value = loss(Y_hat,Y)
+      loss_value = nn.loss(Y_hat,Y,weight_decay,nn.W)
       print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = nn.loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = nn.loss(y_train_predict,Y,weight_decay,nn.W)
 
       validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
@@ -105,10 +123,10 @@ class Optimizer():
       val_accuracy_list.append(validation_accuracy)
       train_loss_list.append(training_loss)
       train_accuracy_list.append(training_accuracy)
-
+    
     return val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list
-
-  def nesterov(self, nn, X, Y, X_val, Y_val, loss, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9], weight_decay = 0):
+    
+  def nesterov(self, nn, X, Y, X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9], weight_decay = 0):
     num_data = X.shape[1]
     ut_w,ut_b = nn.initializeWeights("zero")
     beta = parameters[0]
@@ -123,7 +141,6 @@ class Optimizer():
         X_batch = X[:,indexes_for_batch[batch:batch + batch_size]]
         Y_batch = Y[indexes_for_batch[batch:batch + batch_size]]
   
-        # self.W,self.b = self.initializeWeights()
         a_values,h_values = nn.forwardpropogation(X_batch)
 
         old_W = copy.deepcopy(nn.W)
@@ -135,7 +152,7 @@ class Optimizer():
 
         
         delta_W, delta_b = nn.backpropogation(X_batch,Y_batch,a_values, h_values)
-        # print(np.sum(delta_W[0], axis = 0))
+
         for j in range(nn.num_hidden_layer + 1):
           ut_w[j] = beta*ut_w[j] + delta_W[nn.num_hidden_layer - j]
           ut_b[j] = beta*ut_b[j] + delta_b[nn.num_hidden_layer - j] 
@@ -144,13 +161,13 @@ class Optimizer():
           nn.b[j] = old_b[j] - lr * ut_b[j]
 
       Y_hat = nn.feedforward(X)
-      loss_value = loss(Y_hat,Y)
+      loss_value = nn.loss(Y_hat,Y,weight_decay,nn.W)
       print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = nn.loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = nn.loss(y_train_predict,Y,weight_decay,nn.W)
 
       validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
@@ -160,12 +177,12 @@ class Optimizer():
       val_accuracy_list.append(validation_accuracy)
       train_loss_list.append(training_loss)
       train_accuracy_list.append(training_accuracy)
-
+    
     return val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list
     
 
 
-  def rmsprop(self, nn, X, Y,X_val, Y_val, loss, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.1], weight_decay = 0):
+  def rmsprop(self, nn, X, Y,X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.1], weight_decay = 0):
     num_data = X.shape[1]
     vt_w,vt_b = nn.initializeWeights("zero")
     beta = parameters[0]
@@ -193,13 +210,13 @@ class Optimizer():
           nn.b[j] = nn.b[j] - np.divide(lr * delta_b[nn.num_hidden_layer - j],np.sqrt(vt_b[j] + epsilon))
 
       Y_hat = nn.feedforward(X)
-      loss_value = loss(Y_hat,Y)
+      loss_value = nn.loss(Y_hat,Y,weight_decay,nn.W)
       print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = nn.loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = nn.loss(y_train_predict,Y,weight_decay,nn.W)
 
       validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
@@ -209,10 +226,10 @@ class Optimizer():
       val_accuracy_list.append(validation_accuracy)
       train_loss_list.append(training_loss)
       train_accuracy_list.append(training_accuracy)
-
+    
     return val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list
     
-  def adam(self, nn, X, Y, X_val, Y_val, loss, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.99,0.1], weight_decay = 0):
+  def adam(self, nn, X, Y, X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.99,0.1], weight_decay = 0):
     num_data = X.shape[1]
     vt_w,vt_b = nn.initializeWeights("zero")
     mt_w,mt_b = nn.initializeWeights("zero")
@@ -255,13 +272,13 @@ class Optimizer():
           nn.b[j] = nn.b[j] - np.divide(lr * mt_b_dash,np.sqrt(vt_b_dash + epsilon))
 
       Y_hat = nn.feedforward(X)
-      loss_value = loss(Y_hat,Y)
+      loss_value = nn.loss(Y_hat,Y,weight_decay,nn.W)
       print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = nn.loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = nn.loss(y_train_predict,Y,weight_decay,nn.W)
 
       validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)
@@ -271,10 +288,10 @@ class Optimizer():
       val_accuracy_list.append(validation_accuracy)
       train_loss_list.append(training_loss)
       train_accuracy_list.append(training_accuracy)
-
+    
     return val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list
     
-  def nadam(self, nn, X, Y,X_val, Y_val, loss, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9, 0.999, 0.1], weight_decay = 0):
+  def nadam(self, nn, X, Y,X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9, 0.999, 0.1], weight_decay = 0):
     num_data = X.shape[1]
     vt_w,vt_b = nn.initializeWeights("zero")
     mt_w,mt_b = nn.initializeWeights("zero")
@@ -320,13 +337,13 @@ class Optimizer():
           nn.b[j] = nn.b[j] - np.divide(b_update_numerator,np.sqrt(vt_b_dash + epsilon))
 
       Y_hat = nn.feedforward(X)
-      loss_value = loss(Y_hat,Y)
+      loss_value = nn.loss(Y_hat,Y,weight_decay,nn.W)
       print(f"epoch: {epoch} => loss = {loss_value}")
       y_val_predict = nn.feedforward(X_val)
       y_train_predict = nn.feedforward(X)
 
-      validation_loss = loss(y_val_predict,Y_val,weight_decay,nn.W)
-      training_loss = loss(y_train_predict,Y,weight_decay,nn.W)
+      validation_loss = nn.loss(y_val_predict,Y_val,weight_decay,nn.W)
+      training_loss = nn.loss(y_train_predict,Y,weight_decay,nn.W)
 
       validation_accuracy = nn.calculateAccuracy(X_val, Y_val)
       training_accuracy = nn.calculateAccuracy(X, Y)

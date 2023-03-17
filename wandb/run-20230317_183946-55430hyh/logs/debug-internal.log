@@ -173,3 +173,178 @@
 2023-03-17 18:41:07,182 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
 2023-03-17 18:41:08,100 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
 2023-03-17 18:41:08,100 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:08,993 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-17 18:41:10,100 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:10,101 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:12,101 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:12,102 ERROR   gpu       :85105 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-17 18:41:12,556 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:41:13,165 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,166 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,167 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,167 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,168 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,169 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,171 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,173 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,173 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,175 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,176 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,176 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,177 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 18:41:13,178 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,179 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,179 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,179 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,179 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,179 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,180 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,180 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,180 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,180 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,180 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,180 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,181 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,181 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,181 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,181 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,181 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,181 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,182 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,182 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,182 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,182 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,182 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,182 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,183 DEBUG   SenderThread:85105 [sender.py:send():336] send: history
+2023-03-17 18:41:13,183 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 18:41:13,183 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,183 DEBUG   SenderThread:85105 [sender.py:send():336] send: telemetry
+2023-03-17 18:41:13,183 DEBUG   SenderThread:85105 [sender.py:send():336] send: exit
+2023-03-17 18:41:13,183 INFO    SenderThread:85105 [sender.py:send_exit():559] handling exit code: 0
+2023-03-17 18:41:13,183 INFO    SenderThread:85105 [sender.py:send_exit():561] handling runtime: 85
+2023-03-17 18:41:13,183 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,184 INFO    SenderThread:85105 [sender.py:send_exit():567] send defer
+2023-03-17 18:41:13,184 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,184 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-17 18:41:13,184 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,184 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-17 18:41:13,184 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 1
+2023-03-17 18:41:13,184 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,184 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-17 18:41:13,184 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,184 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-17 18:41:13,185 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 2
+2023-03-17 18:41:13,185 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,185 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-17 18:41:13,185 INFO    HandlerThread:85105 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-17 18:41:13,185 DEBUG   SystemMonitor:85105 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-17 18:41:13,185 DEBUG   SystemMonitor:85105 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-17 18:41:13,186 INFO    HandlerThread:85105 [interfaces.py:finish():175] Joined cpu
+2023-03-17 18:41:13,186 INFO    HandlerThread:85105 [interfaces.py:finish():175] Joined disk
+2023-03-17 18:41:13,218 ERROR   gpu       :85105 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2023-03-17 18:41:13,218 INFO    HandlerThread:85105 [interfaces.py:finish():175] Joined gpu
+2023-03-17 18:41:13,218 INFO    HandlerThread:85105 [interfaces.py:finish():175] Joined memory
+2023-03-17 18:41:13,218 INFO    HandlerThread:85105 [interfaces.py:finish():175] Joined network
+2023-03-17 18:41:13,219 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,219 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-17 18:41:13,219 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 3
+2023-03-17 18:41:13,219 DEBUG   SenderThread:85105 [sender.py:send():336] send: stats
+2023-03-17 18:41:13,219 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,219 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-17 18:41:13,219 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,219 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-17 18:41:13,219 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 4
+2023-03-17 18:41:13,220 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,220 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-17 18:41:13,220 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,220 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-17 18:41:13,220 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 5
+2023-03-17 18:41:13,220 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,220 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-17 18:41:13,220 DEBUG   SenderThread:85105 [sender.py:send():336] send: summary
+2023-03-17 18:41:13,221 INFO    SenderThread:85105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-17 18:41:13,221 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,221 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-17 18:41:13,221 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 6
+2023-03-17 18:41:13,221 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,221 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-17 18:41:13,221 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,221 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-17 18:41:13,225 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:41:13,571 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 7
+2023-03-17 18:41:13,572 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:13,572 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-17 18:41:13,573 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:13,573 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-17 18:41:13,909 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/config.yaml
+2023-03-17 18:41:13,909 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:41:13,910 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/wandb-summary.json
+2023-03-17 18:41:14,169 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-17 18:41:15,278 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 8
+2023-03-17 18:41:15,278 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: poll_exit
+2023-03-17 18:41:15,279 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:15,279 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-17 18:41:15,280 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:15,281 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-17 18:41:15,281 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 9
+2023-03-17 18:41:15,281 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:15,281 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-17 18:41:15,282 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:15,282 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-17 18:41:15,283 INFO    SenderThread:85105 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-17 18:41:15,910 INFO    Thread-13 :85105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:41:15,912 INFO    SenderThread:85105 [dir_watcher.py:finish():392] scan: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files
+2023-03-17 18:41:15,912 INFO    SenderThread:85105 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log output.log
+2023-03-17 18:41:15,913 INFO    SenderThread:85105 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/config.yaml config.yaml
+2023-03-17 18:41:15,919 INFO    SenderThread:85105 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/wandb-summary.json wandb-summary.json
+2023-03-17 18:41:15,923 INFO    SenderThread:85105 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/wandb-metadata.json wandb-metadata.json
+2023-03-17 18:41:15,925 INFO    SenderThread:85105 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/conda-environment.yaml conda-environment.yaml
+2023-03-17 18:41:15,930 INFO    SenderThread:85105 [dir_watcher.py:finish():406] scan save: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/requirements.txt requirements.txt
+2023-03-17 18:41:15,952 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 10
+2023-03-17 18:41:15,953 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:15,954 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-17 18:41:15,965 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:15,966 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-17 18:41:15,966 INFO    SenderThread:85105 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-17 18:41:16,804 INFO    wandb-upload_0:85105 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/output.log
+2023-03-17 18:41:16,952 INFO    wandb-upload_3:85105 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/conda-environment.yaml
+2023-03-17 18:41:17,011 INFO    wandb-upload_1:85105 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/config.yaml
+2023-03-17 18:41:17,195 INFO    wandb-upload_4:85105 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/requirements.txt
+2023-03-17 18:41:17,241 INFO    wandb-upload_2:85105 [upload_job.py:push():138] Uploaded file /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/files/wandb-summary.json
+2023-03-17 18:41:17,442 INFO    Thread-12 :85105 [sender.py:transition_state():587] send defer: 11
+2023-03-17 18:41:17,443 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:17,443 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-17 18:41:17,444 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:17,444 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-17 18:41:17,444 INFO    SenderThread:85105 [file_pusher.py:join():167] waiting for file pusher
+2023-03-17 18:41:17,445 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 12
+2023-03-17 18:41:17,445 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:17,445 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-17 18:41:17,446 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:17,446 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-17 18:41:18,369 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 13
+2023-03-17 18:41:18,370 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:18,370 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-17 18:41:18,370 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 18:41:18,371 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:18,372 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-17 18:41:18,372 INFO    SenderThread:85105 [sender.py:transition_state():587] send defer: 14
+2023-03-17 18:41:18,374 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: defer
+2023-03-17 18:41:18,374 INFO    HandlerThread:85105 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-17 18:41:18,375 DEBUG   SenderThread:85105 [sender.py:send():336] send: final
+2023-03-17 18:41:18,376 DEBUG   SenderThread:85105 [sender.py:send():336] send: footer
+2023-03-17 18:41:18,376 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: defer
+2023-03-17 18:41:18,376 INFO    SenderThread:85105 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-17 18:41:18,378 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-17 18:41:18,380 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: server_info
+2023-03-17 18:41:18,380 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-17 18:41:18,381 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-17 18:41:18,382 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: poll_exit
+2023-03-17 18:41:18,384 DEBUG   SenderThread:85105 [sender.py:send_request():363] send_request: server_info
+2023-03-17 18:41:19,096 DEBUG   HandlerThread:85105 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-17 18:41:19,096 INFO    HandlerThread:85105 [handler.py:finish():841] shutting down handler
+2023-03-17 18:41:19,384 INFO    WriterThread:85105 [datastore.py:close():299] close: /home/tharikh/dl-ass-1/wandb/run-20230317_183946-55430hyh/run-55430hyh.wandb
+2023-03-17 18:41:20,094 INFO    SenderThread:85105 [sender.py:finish():1493] shutting down sender
+2023-03-17 18:41:20,094 INFO    SenderThread:85105 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-17 18:41:20,095 INFO    SenderThread:85105 [file_pusher.py:join():167] waiting for file pusher

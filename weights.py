@@ -2,6 +2,17 @@ import numpy as np
 
 # class having all the weight initializations
 class WeightInit():
+  '''
+  It contains all weight initializations. initialize the object with name of initialization
+  call object.initializeWeight() function to get the corresponding function, then pass shapes to get corresponding initializations
+    
+  The initializations are :
+    -> zero
+    -> random
+    -> xavier
+  
+  '''
+    
   def __init__(self,weight_name):
     self.weight_name = weight_name
     self.weight_dict={
