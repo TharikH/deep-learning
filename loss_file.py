@@ -57,7 +57,8 @@ class Loss():
 
   def mse(self, Y_hat, Y,weight_decay=0,W=[]):
     m,n = Y_hat.shape
-    diff_matrix = (Y_hat - Y)**2
+    one_hot_Y = self.findOneHotVector(Y_hat,Y)
+    diff_matrix = (Y_hat - one_hot_Y)**2
     loss = np.sum(diff_matrix)
     
     decay_loss = 0

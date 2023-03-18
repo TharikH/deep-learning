@@ -37,8 +37,8 @@ def parsArg():
                         help='Number of hidden layers used in feedforward neural network')
     parser.add_argument('-sz','--hidden_size',default=128, type=int,
                         help='Number of hidden neurons in a feedforward layer')
-    parser.add_argument('-a','--activation',default='tanh', choices = ["identity", "sigmoid", "tanh", "ReLU"],
-                        help='choices: ["identity", "sigmoid", "tanh", "ReLU"]')
+    parser.add_argument('-a','--activation',default='tanh', choices = ["identity", "sigmoid", "tanh", "relu"],
+                        help='choices: ["identity", "sigmoid", "tanh", "relu"]')
     args = parser.parse_args()
     
     return args
