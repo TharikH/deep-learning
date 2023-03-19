@@ -45,16 +45,20 @@ We can give different values for the parameters and this can be done by specifyi
 
 </br>
 
-Here it is an example of how to do run with epoch = 5 and activation as relu : `python train.py -e 5 -a relu`
+Here it is an example of how to do run with epoch = 5 and activation as relu : `python train.py -e 5 -a relu`.
+
+</br>
+After running the file as shown above, training and testing accuracies will be printed on the terminal. Also the plots for training, validation, testing losses and accuracies for each epochs will be logged onto the wandb project (that you provided or into default project), so you can see the plots and see whether that particular configuration worked or not.
+For checking whether learning is correct : Accuracy should be high and loss should be low.
 
 
 Also on using wandb, it is needed to put the corresponding key of the user so it can be logged on to the users wandb project.
-It can be changed by searching for `wandb.login(key = '<place your key>')`
+It can be changed by searching for `wandb.login(key = '<place your key>')`.
 
-
+### Additional Resources and help
 It also contains dl_assignment.ipynb which can be open via colab or jupyter notebook. It contains all the codes for neural network, running the sweeps, logging the confusion matrices, logging the images for the dataset etc. But it doesn't have every configurations, need to change the second last and last cell to run for different configurations separately, for example to run and log confusion matrix, losses and accuracies, just run before second last cell and run last cell as second last cell is for sweep. To run sweep run till second last cell (can change config accordingly). In the last part uncomment some part to log different metrics and plots. So .pynb file can be used as reference for the flow.
 
 
-All the sweep details for choosing the hyperparameters, several runs, sample images, and related plots can be viewed by visiting (it contains the entire report) : `https://api.wandb.ai/links/cs22m058/hvbtu48g`
+All the sweep details for choosing the hyperparameters, runs, sample images, and related plots can be viewed by visiting (it contains the entire report) : `https://api.wandb.ai/links/cs22m058/hvbtu48g`.
 
 
