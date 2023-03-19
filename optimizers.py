@@ -182,7 +182,7 @@ class Optimizer():
     
 
 
-  def rmsprop(self, nn, X, Y,X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.1], weight_decay = 0):
+  def rmsprop(self, nn, X, Y,X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.000001], weight_decay = 0):
     num_data = X.shape[1]
     vt_w,vt_b = nn.initializeWeights("zero")
     beta = parameters[0]
@@ -229,7 +229,7 @@ class Optimizer():
     
     return val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list
     
-  def adam(self, nn, X, Y, X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.99,0.1], weight_decay = 0):
+  def adam(self, nn, X, Y, X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9,0.99,0.000001], weight_decay = 0):
     num_data = X.shape[1]
     vt_w,vt_b = nn.initializeWeights("zero")
     mt_w,mt_b = nn.initializeWeights("zero")
@@ -291,7 +291,7 @@ class Optimizer():
     
     return val_loss_list,val_accuracy_list,train_loss_list,train_accuracy_list
     
-  def nadam(self, nn, X, Y,X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9, 0.999, 0.1], weight_decay = 0):
+  def nadam(self, nn, X, Y,X_val, Y_val, lr, epochs, batch_size,indexes_for_batch,parameters = [0.9, 0.999, 0.000001], weight_decay = 0):
     num_data = X.shape[1]
     vt_w,vt_b = nn.initializeWeights("zero")
     mt_w,mt_b = nn.initializeWeights("zero")
