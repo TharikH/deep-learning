@@ -27,12 +27,12 @@ def parsArg():
                         help='Beta1 used by adam and nadam optimizers.')
     parser.add_argument('-beta2','--beta2',default=0.99, type=float,
                         help='Beta2 used by adam and nadam optimizers')
-    parser.add_argument('-eps','--epsilon',default=0.1, type=float,
+    parser.add_argument('-eps','--epsilon',default=0.000001, type=float,
                         help='Epsilon used by optimizers')
     parser.add_argument('-w_d','--weight_decay',default=0, type=float,
                         help='Weight decay used by optimizers')
-    parser.add_argument('-w_i','--weight_init',default='xavier', choices = ["random", "Xavier"],
-                        help='choices: ["random", "Xavier"]')
+    parser.add_argument('-w_i','--weight_init',default='xavier', choices = ["random", "xavier"],
+                        help='choices: ["random", "xavier"]')
     parser.add_argument('-nhl','--num_layers',default=5, type=int,
                         help='Number of hidden layers used in feedforward neural network')
     parser.add_argument('-sz','--hidden_size',default=128, type=int,

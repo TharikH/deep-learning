@@ -7,6 +7,7 @@ This project is an implementation of a neural network from scratch using python 
  - wandb library
  - copy library
  - keras library (for downloading mnist and fashion_mnist dataset)
+ - matplotlib (If you want to plot confusion matrix)
 
 Either download the above dependencies or run :  `pip install -r requirements.txt`
 
@@ -15,7 +16,7 @@ First make sure the above dependencies have been installed in your system. Then 
 
 `git clone https://github.com/TharikH/deep-learning`
 
-You can also download the entire repository as a zip file from the Download ZIP option on the above button.
+You can also download the entire repository as a zip file from the Download ZIP option on the above button provided by github.
 
 
 
@@ -35,7 +36,7 @@ We can give different values for the parameters and this can be done by specifyi
 | `-beta`, `--beta` | 0.9 | Beta used by rmsprop optimizer | 
 | `-beta1`, `--beta1` | 0.9 | Beta1 used by adam and nadam optimizers. | 
 | `-beta2`, `--beta2` | 0.99 | Beta2 used by adam and nadam optimizers. |
-| `-eps`, `--epsilon` | 0.1 | Epsilon used by optimizers. |
+| `-eps`, `--epsilon` | 0.000001 | Epsilon used by optimizers. |
 | `-w_d`, `--weight_decay` | 0.0 | Weight decay used by optimizers. |
 | `-w_i`, `--weight_init` | xavier | choices:  ["random", "Xavier"] | 
 | `-nhl`, `--num_layers` | 5 | Number of hidden layers used in feedforward neural network. | 
@@ -46,6 +47,14 @@ We can give different values for the parameters and this can be done by specifyi
 
 Here it is an example of how to do run with epoch = 5 and activation as relu : `python train.py -e 5 -a relu`
 
-It also contains dl_assignment.ipynb which can be open via colab or jupyter notebook. It contains all the codes for neural network, running the sweeps, logging the confusion matrices, logging the images for the dataset etc. But it doesn't have every configurations, need to change the second last and last cell to run for different configurations separately, for example to run and log confusion matrix, losses and accuracies, just run before second last cell and run last cell as second last cell is for sweep. To run sweep run till second last cell (can change config accordingly). So .pynb file can be used as reference for the flow.
+
+Also on using wandb, it is needed to put the corresponding key of the user so it can be logged on to the users wandb project.
+It can be changed by searching for `wandb.login(key = '<place your key>')`
+
+
+It also contains dl_assignment.ipynb which can be open via colab or jupyter notebook. It contains all the codes for neural network, running the sweeps, logging the confusion matrices, logging the images for the dataset etc. But it doesn't have every configurations, need to change the second last and last cell to run for different configurations separately, for example to run and log confusion matrix, losses and accuracies, just run before second last cell and run last cell as second last cell is for sweep. To run sweep run till second last cell (can change config accordingly). In the last part uncomment some part to log different metrics and plots. So .pynb file can be used as reference for the flow.
+
+
+All the sweep details for choosing the hyperparameters, several runs, sample images, and related plots can be viewed by visiting (it contains the entire report) : `https://api.wandb.ai/links/cs22m058/hvbtu48g`
 
 
